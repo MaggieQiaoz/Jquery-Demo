@@ -1,0 +1,29 @@
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 15%;
+    padding: 5px;
+}
+
+.result {
+    border: 5px solid red;
+}
+
+.show {
+    background-color: steelblue;
+}
+
+.ancestors * {
+    display: block;
+    border: 2px solid lightgrey;
+    /* color: lightgrey; */
+    padding: 5px;
+    margin: 15px;
+}
+
+.highlight {
+    color: "red";
+    border: "2px solid red"
+}

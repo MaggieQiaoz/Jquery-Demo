@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<!-- code adapted from w3school -->
+<!-- https://www.w3schools.com/jquery/jquery_traversing_ancestors.asp -->
+
+
+<head>
+    <style>
+        .ancestors * {
+            display: block;
+            border: 2px solid;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("span").parents("li").css({
+                "color": "blue",
+                "border": "2px solid blue"
+            });
+
+            $("div").children("ul").css({
+                "color": "red",
+                "border": "2px solid red"
+            });
+
+            $("span").siblings().css({
+                "color": "purple",
+                "border": "2px solid purple"
+            });
+
+
+        });
+    </script>
+</head>
+
+<body class="ancestors">body (great-great-grandparent)
+    <div style="width:500px;">div (great-grandparent)
+        <ul>ul (grandparent)
+            <li>li (direct parent)
+                <span>span1</span>
+                <p>Paragraph</p>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

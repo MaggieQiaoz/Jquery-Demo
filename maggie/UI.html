@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JQuery UI Example</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <ul id="List" class="row">
+            <li class="column">
+                <img id="pic1" src="image/blissey-fs8.png" alt="blissey" style="width:200px;height:200px;" />
+                <figcaption>Toggle clip</figcaption>
+            </li>
+            <li class="column">
+                <img id="pic2" src="image/pikachu-fs8.png" alt="pikachu" style="width:200px;height:200px;" />
+                <figcaption>Draggable</figcaption>
+            </li>
+            <li class="column">
+                <img id="pic3" src="image/snorlax-fs8.png" alt="snorlax" style="width:200px;height:200px;" />
+                <figcaption>highlight effect</figcaption>
+            </li>
+            <li class="column">
+                <img id="pic4" src="image/wigglytuff-fs8.png" alt="wigglytuff" style="width:200px;height:200px;" />
+                <figcaption>Bounce effect</figcaption>
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script type="text/javascript" language="javascript">
+    $('#pic1').click(function() {
+        $("#pic1").toggle("clip");
+    });
+    $('#pic2').draggable({
+        addClasses: false
+    });
+    $('#pic3').click(function() {
+        $("#pic3").effect("highlight");
+    });
+    $('#pic4').click(function() {
+        $('#pic4').effect("bounce", "slow");
+    });
+</script>
+
+</html>
